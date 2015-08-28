@@ -188,4 +188,8 @@
 
 #define RT_USING_W25QXX
 
+#define RT_USING_USB_DEVICE
+
+#define RT_USB_DEVICE_MSTORAGE
+
 #endif
