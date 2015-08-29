@@ -188,8 +188,21 @@
 
 #define RT_USING_W25QXX
 
+// <section name="RT_USING_USBD" description="USB Device stack" default="true" >
+#define RT_USING_USBD
 #define RT_USING_USB_DEVICE
-
+// <integer name="USB_VENDOR_ID" description="Vendor ID" default="0xFFFF" />
+#define USB_VENDOR_ID       (0x0483)
+// <integer name="USB_PRODUCT_ID" description="Product ID" default="0xFFFF" />
+#define USB_PRODUCT_ID      (0xbacf)
+// <bool name="RT_USB_DEVICE_COMPOSITE" description="Using USB composite device" default="true" />
+#define RT_USB_DEVICE_COMPOSITE
+// <bool name="RT_USB_DEVICE_CDC" description="Using CDC serial device" default="true" />
+//#define RT_USB_DEVICE_CDC
+// <bool name="RT_USB_DEVICE_MSTORAGE" description="Using USB mass storage device" default="true" />
 #define RT_USB_DEVICE_MSTORAGE
+// <string name="RT_USB_MSTORAGE_DISK_NAME" description="Disk name used in mass storage class" default="sd0" />
+#define RT_USB_MSTORAGE_DISK_NAME   "spi_flash_0"
+// </section>
 
 #endif
