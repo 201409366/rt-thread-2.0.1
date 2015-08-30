@@ -10,7 +10,7 @@ usb_endp.c
 usb_istr.c
 usb_prop.c
 usb_pwr.c
-vcp.c
+HIDmouse.c
 """)
 
 usb_fs_driver = Split('''
@@ -27,6 +27,6 @@ path = [cwd,
 
 src = usb + usb_fs_driver
 
-group = DefineGroup('usb_vcp', src, depend = ['RT_USING_STM32_USB_HID'], CPPPATH = path)
+group = DefineGroup('usb_hid', src, depend = ['RT_USING_STM32_USB_HID'], CPPPATH = path)
 
 Return('group')
