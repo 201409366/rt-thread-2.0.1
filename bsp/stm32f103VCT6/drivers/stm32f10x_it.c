@@ -120,36 +120,36 @@ void DebugMon_Handler(void)
 /*  file (startup_stm32f10x_xx.s).                                            */
 /******************************************************************************/
 
-#ifdef  RT_USING_LWIP
-/*******************************************************************************
-* Function Name  : EXTI2_IRQHandler
-* Description    : This function handles External lines 9 to 5 interrupt request.
-* Input          : None
-* Output         : None
-* Return         : None
-*******************************************************************************/
+//#ifdef  RT_USING_LWIP
+///*******************************************************************************
+//* Function Name  : EXTI2_IRQHandler
+//* Description    : This function handles External lines 9 to 5 interrupt request.
+//* Input          : None
+//* Output         : None
+//* Return         : None
+//*******************************************************************************/
 
 
-void EXTI2_IRQHandler(void)
-{
-    extern void rt_dm9000_isr(void);
+//void EXTI2_IRQHandler(void)
+//{
+//    extern void rt_dm9000_isr(void);
 
-    /* enter interrupt */
-    rt_interrupt_enter();
+//    /* enter interrupt */
+//    rt_interrupt_enter();
 
-    EXTI_ClearITPendingBit(EXTI_Line2);
+//    EXTI_ClearITPendingBit(EXTI_Line2);
 
-//		while( GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_2)==0 )
-//		{
-			 rt_dm9000_isr();
-//		}
-	
-    
-    /* leave interrupt */
-    rt_interrupt_leave();                           /* Tell uC/OS-II that we are leaving the ISR          */
-}
+////		while( GPIO_ReadInputDataBit(GPIOE,GPIO_Pin_2)==0 )
+////		{
+//			 rt_dm9000_isr();
+////		}
+//	
+//    
+//    /* leave interrupt */
+//    rt_interrupt_leave();                           /* Tell uC/OS-II that we are leaving the ISR          */
+//}
 
-#endif /* RT_USING_LWIP */
+//#endif /* RT_USING_LWIP */
 
 
 /**
@@ -168,6 +168,23 @@ void TIM5_IRQHandler(void)
     rt_interrupt_leave();
 }
 
+#ifdef  RT_USING_LWIP
+void EXTI9_5_IRQHandler(void)
+{
+	extern void enc28j60_isr(void);
+	
+	if(EXTI_GetITStatus(EXTI_Line8) != RESET)
+	{	
+		rt_interrupt_enter();
+		EXTI_ClearITPendingBit(EXTI_Line8);
+		enc28j60_isr();
+		rt_interrupt_leave();
+	}
+}
+
+
+
+#endif /* RT_USING_LWIP */
 
 /**
   * @}

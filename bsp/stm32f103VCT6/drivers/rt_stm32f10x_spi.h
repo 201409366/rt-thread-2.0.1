@@ -5,7 +5,7 @@
 
 #include "stm32f10x.h"
 #include "stm32f10x_spi.h"
-
+#include <drivers/spi.h>
 #include "board.h"
 
 //#define SPI_USE_DMA

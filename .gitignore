@@ -3814,3 +3814,10 @@
 /bsp/stm32f103RBT6Aerobat/project_rtthread-stm32.dep
 /bsp/stm32f103RBT6Aerobat/project_uvopt.bak
 /bsp/stm32f103RBT6Board/project_uvopt.bak
+/bsp/stm32f40x
+/bsp/stm32f103VCT6/JLinkLog.txt
+/bsp/stm32f103VCT6/project.uvgui.yezi
+/bsp/stm32f103VCT6/project.uvgui_yezi.bak
+/bsp/stm32f103VCT6/project_rtthread-stm32.dep
+/bsp/stm32f103VCT6/project_uvopt.bak
+/bsp/stm32f103VCT6/project_uvproj.bak

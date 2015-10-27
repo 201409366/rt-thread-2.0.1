@@ -89,18 +89,12 @@ void cali_store(struct calibration_data *data)
 
 void rt_init_thread_entry(void* parameter)
 {
-
-#ifdef RT_USING_LWIP
-	rt_hw_dm9000_init();
-#endif	
 	
 #ifdef RT_USING_COMPONENTS_INIT
     /* initialization RT-Thread Components */
     rt_components_init();
 #endif
 
-	rt_platform_init();	
-	
 #ifdef  RT_USING_FINSH
     finsh_set_device(RT_CONSOLE_DEVICE_NAME);
 #endif  /* RT_USING_FINSH */
@@ -146,7 +140,12 @@ void rt_init_thread_entry(void* parameter)
     }
 #endif /* #ifdef RT_USING_RTGUI */
 		
-		app2401Init();
+#ifdef RT_USING_I2C
+		{
+			extern rt_err_t app2401Init(void);
+			app2401Init();	
+		}		
+#endif /* #ifdef RT_USING_I2C */
 }
 
 int rt_application_init(void)

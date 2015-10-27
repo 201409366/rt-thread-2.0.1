@@ -41,8 +41,12 @@
 
 /* USART driver select. */
 #define RT_USING_UART1
-#define RT_USING_UART2
+//#define RT_USING_UART2
 //#define RT_USING_UART3
+
+#ifdef RT_USING_SPI
+	//#define USING_NRF24L01
+#endif /* __BOARD_H__ */
 
 void rt_hw_board_init(void);
 

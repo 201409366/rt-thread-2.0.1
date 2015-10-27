@@ -3,7 +3,14 @@ Import('rtconfig')
 from building import *
 
 cwd     = os.path.join(str(Dir('#')), 'applications')
-src	= Glob('*.c')
+src = Split("""
+application.c
+startup.c
+""")
+
+if GetDepend('RT_USING_I2C'):
+    src += ['app_2401.c']
+
 CPPPATH = [cwd, str(Dir('#'))]
 
 group = DefineGroup('Applications', src, depend = [''], CPPPATH = CPPPATH)
