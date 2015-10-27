@@ -79,7 +79,7 @@ static rt_err_t mpu6050_init(rt_device_t dev)
 	rt_thread_delay(1);
 	mpu6050_setFullScaleGyroRange(dev,MPU6050_GYRO_FS_2000);//陀螺仪最大量程 +-2000度每秒
 	rt_thread_delay(1);
-	mpu6050_setFullScaleAccelRange(dev,MPU6050_ACCEL_FS_8);	//加速度度最大量程 +-8G
+	mpu6050_setFullScaleAccelRange(dev,MPU6050_ACCEL_FS_16);	//加速度度最大量程 +-8G
 	rt_thread_delay(1);
 	mpu6050_setDLPF(dev,MPU6050_DLPF_BW_42);
 	rt_thread_delay(1);

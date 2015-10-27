@@ -614,7 +614,7 @@ rt_err_t rt_thread_resume(rt_thread_t thread)
 
     /* remove from suspend list */
     rt_list_remove(&(thread->tlist));
-
+		
     rt_timer_stop(&thread->thread_timer);
 
     /* enable interrupt */

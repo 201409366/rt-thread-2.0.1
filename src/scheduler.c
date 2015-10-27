@@ -193,7 +193,7 @@ void rt_schedule(void)
     rt_base_t level;
     struct rt_thread *to_thread;
     struct rt_thread *from_thread;
-
+	
     /* disable interrupt */
     level = rt_hw_interrupt_disable();
 
@@ -252,7 +252,6 @@ void rt_schedule(void)
             }
         }
     }
-
     /* enable interrupt */
     rt_hw_interrupt_enable(level);
 }
@@ -347,7 +346,6 @@ void rt_schedule_remove_thread(struct rt_thread *thread)
         rt_thread_ready_priority_group &= ~thread->number_mask;
 #endif
     }
-
     /* enable interrupt */
     rt_hw_interrupt_enable(temp);
 }
