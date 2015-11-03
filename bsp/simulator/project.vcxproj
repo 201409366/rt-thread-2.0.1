@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>vs</ProjectName>
+    <ProjectGuid>{4A6BF1B1-C645-4BAD-A9B7-7B6E3DB67B2C}</ProjectGuid>
+    <RootNamespace>vs2008</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>NotSet</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\init;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\libcpu\sim\common;..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\libcpu\sim\win32;SDL\include;applications;drivers;rtgui_demo\snake;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;MSVC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>winmm.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;SDL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>SDL\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ItemGroup>
+    <ClCompile Include="applications\application.c" />
+    <ClCompile Include="applications\platform.c" />
+    <ClCompile Include="applications\startup.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="drivers\board.c" />
+    <ClCompile Include="drivers\dfs_win32.c" />
+    <ClCompile Include="drivers\nanddrv_file.c" />
+    <ClCompile Include="drivers\sd_sim.c" />
+    <ClCompile Include="drivers\sdl_fb.c" />
+    <ClCompile Include="drivers\serial.c" />
+    <ClCompile Include="drivers\usart_sim.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="rtgui_demo\snake\snake.c" />
+    <ClCompile Include="rtgui_demo\snake\snake_gui.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\clock.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\device.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\idle.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\ipc.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\irq.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\kservice.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\object.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\scheduler.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\thread.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\src\timer.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\libcpu\sim\win32\cpu_port.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\src\dfs.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\src\dfs_fs.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\src\dfs_file.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\src\dfs_posix.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\dfs_elm.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\ff.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_badblock.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_blockinfo.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_buf.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_debug.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_device.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_ecc.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_crc.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_fd.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_find.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_flash.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_fs.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_init.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_mem.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_mtb.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_pool.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_public.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_tree.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_utils.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\uffs\uffs_version.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\dfs_uffs.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\uffs_nandif.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\uffs_rtthread.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\mtd\mtd_nand.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\completion.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\dataqueue.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\pipe.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\portal.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\ringbuffer.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\src\workqueue.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\shell.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\symbol.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\cmd.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_compiler.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_error.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_heap.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_init.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_node.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_ops.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_parser.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_var.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_vm.c" />
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_token.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\init\components.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="SDL\include\SDL_active.h" />
+    <ClInclude Include="SDL\include\SDL_audio.h" />
+    <ClInclude Include="SDL\include\SDL_cdrom.h" />
+    <ClInclude Include="SDL\include\SDL_config.h" />
+    <ClInclude Include="SDL\include\SDL_config_dreamcast.h" />
+    <ClInclude Include="SDL\include\SDL_config_macos.h" />
+    <ClInclude Include="SDL\include\SDL_config_macosx.h" />
+    <ClInclude Include="SDL\include\SDL_config_minimal.h" />
+    <ClInclude Include="SDL\include\SDL_config_os2.h" />
+    <ClInclude Include="SDL\include\SDL_config_symbian.h" />
+    <ClInclude Include="SDL\include\SDL_config_win32.h" />
+    <ClInclude Include="SDL\include\SDL_cpuinfo.h" />
+    <ClInclude Include="SDL\include\SDL_endian.h" />
+    <ClInclude Include="SDL\include\SDL_error.h" />
+    <ClInclude Include="SDL\include\SDL_events.h" />
+    <ClInclude Include="SDL\include\SDL_joystick.h" />
+    <ClInclude Include="SDL\include\SDL_keyboard.h" />
+    <ClInclude Include="SDL\include\SDL_keysym.h" />
+    <ClInclude Include="SDL\include\SDL_loadso.h" />
+    <ClInclude Include="SDL\include\SDL_main.h" />
+    <ClInclude Include="SDL\include\SDL_mouse.h" />
+    <ClInclude Include="SDL\include\SDL_mutex.h" />
+    <ClInclude Include="SDL\include\SDL_platform.h" />
+    <ClInclude Include="SDL\include\SDL_quit.h" />
+    <ClInclude Include="SDL\include\SDL_rwops.h" />
+    <ClInclude Include="SDL\include\SDL_stdinc.h" />
+    <ClInclude Include="SDL\include\SDL_thread.h" />
+    <ClInclude Include="SDL\include\SDL_timer.h" />
+    <ClInclude Include="SDL\include\SDL_version.h" />
+    <ClInclude Include="SDL\include\SDL_video.h" />
+    <ClInclude Include="SDL\include\begin_code.h" />
+    <ClInclude Include="SDL\include\close_code.h" />
+    <ClInclude Include="SDL\include\sdl.h" />
+    <ClInclude Include="drivers\board.h" />
+    <ClInclude Include="drivers\serial.h" />
+    <ClInclude Include="rtconfig.h" />
+    <ClInclude Include="rtgui_demo\snake\snake.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\diskio.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\ff.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\ffconf.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\elmfat\integer.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\dfs_uffs.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_badblock.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_blockinfo.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_buf.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_core.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_crc.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_device.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_ecc.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_fd.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_find.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_flash.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_fs.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_mem.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_mtb.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_os.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_pool.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_public.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_tree.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_types.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_utils.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\src\inc\uffs\uffs_version.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\filesystems\uffs\uffs_config.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_def.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_elm.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_file.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_fs.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_init.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\dfs\include\dfs_posix.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\alarm.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\i2c-bit-ops.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\i2c.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\i2c_dev.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mmcsd_card.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mmcsd_cmd.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mmcsd_core.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mmcsd_host.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mtd_nand.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\mtd_nor.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\pin.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\rtc.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\sd.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\sdio.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\sdio_func_ids.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\serial.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\spi.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\usb_common.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\usb_device.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\usb_host.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\drivers\watchdog.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\drivers\include\rtdevice.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_error.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_heap.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_node.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_ops.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_parser.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_token.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_var.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\finsh_vm.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\msh.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\finsh\shell.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\components\init\components.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rtdebug.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rtdef.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rthw.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rtm.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rtservice.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\include\rtthread.h" />
+    <ClInclude Include="..\..\..\..\..\university\circuit\STM32\RT_Thread\rt-thread\rt-thread-2.0.1\libcpu\sim\win32\cpu_port.h" />
+  </ItemGroup>
+</Project>

@@ -3821,3 +3821,13 @@
 /bsp/stm32f103VCT6/project_rtthread-stm32.dep
 /bsp/stm32f103VCT6/project_uvopt.bak
 /bsp/stm32f103VCT6/project_uvproj.bak
+/bsp/simulator/Debug
+/bsp/simulator/build
+/bsp/simulator/.sconsign.dblite
+/bsp/simulator/project.sln
+/bsp/simulator/project.v12.suo
+/bsp/simulator/project.vcxproj.filters
+/bsp/simulator/rtconfig.pyc
+/bsp/simulator/project.sdf
+/bsp/at91sam9260
+/tools/vs2012.pyc

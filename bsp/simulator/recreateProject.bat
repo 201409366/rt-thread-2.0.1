@@ -1,0 +1,1 @@
+scons --target=vs2012 -s
