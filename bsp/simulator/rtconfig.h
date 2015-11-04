@@ -2,7 +2,7 @@
 #ifndef __RTTHREAD_CFG_H__
 #define __RTTHREAD_CFG_H__
 
-#define RT_HEAP_SIZE   (1024*1024*2)
+#define RT_HEAP_SIZE   (1024*1024*32)
 
 #if  defined(_MSC_VER)
 /* SECTION: port for visual studio */
@@ -31,7 +31,7 @@
 
 /* SECTION: basic kernel options */
 /* RT_NAME_MAX*/
-#define RT_NAME_MAX	8
+#define RT_NAME_MAX	6
 
 /* RT_ALIGN_SIZE*/
 #define RT_ALIGN_SIZE	4
@@ -83,7 +83,7 @@
 #define RT_USING_HEAP
 
 /* Using Small MM */
-//#define RT_USING_SMALL_MEM
+#define RT_USING_SMALL_MEM
 /* #define RT_TINY_SIZE */
 
 /* SECTION: Device System */
